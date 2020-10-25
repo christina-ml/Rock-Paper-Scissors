@@ -99,10 +99,6 @@ class Game:
         for round in range(1, 20):
             print(f"• • • Round {round} --> GO!")
             self.play_round()
-            # print("Game over!")
-
-    # def quit():
-    #     print("Game over! done!")
 
 
 if __name__ == '__main__':
