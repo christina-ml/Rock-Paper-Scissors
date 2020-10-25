@@ -36,6 +36,12 @@ def beats(one, two):
             (one == 'paper' and two == 'rock'))
 
 
+def tied_round(one, two):
+    return ((one == 'rock' and two == 'rock') or
+            (one == 'scissors' and two == 'scissors') or
+            (one == 'paper' and two == 'paper'))
+
+
 def play_again_question():
     response = input("Play again? (y/n)").lower()
     if response == "y":
@@ -68,8 +74,11 @@ class Game:
         elif beats(move1, move2):
             self.p2_score += 1
             print_pause("* * * Player 2 wins this round * * *\n")
-        else:
+        elif tied_round(move1, move2):
             print_pause("* * * It's a tie this round! * * *\n")
+        else:
+            self.p2_score += 1
+            print_pause("* * * Player 2 wins this round * * *\n")
         print("The current score is:")  # This lets you know the current score
         print("Player 1:")
         print_pause(self.p1_score)
@@ -81,10 +90,16 @@ class Game:
         results2 = self.p2_score
         if results1 == 3:
             print("Hooray! Player 1 has won the most rounds!")
+            print(f"Results:\nPlayer 1 Final Score - {self.p1_score} "
+                  f"point(s)\nPlayer 2 Final Score - {self.p2_score} "
+                  "point(s).")
             print("Player 2 has been defeated.\n")
             play_again_question()
         if results2 == 3:
             print("Incredible! Player 2 has won the most rounds!")
+            print(f"Results:\nPlayer 1 Final Score - {self.p1_score} "
+                  f"point(s)\nPlayer 2 Final Score - {self.p2_score} "
+                  "point(s).")
             print("Player 1 has been defeated.\n")
             play_again_question()
 
