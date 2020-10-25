@@ -37,7 +37,7 @@ def beats(one, two):
 
 
 def play_again_question():
-    response = input("Play again? (y/n)")
+    response = input("Play again? (y/n)").lower()
     if response == "y":
         if __name__ == '__main__':
             game = Game(RandomPlayer(), RandomPlayer())  # Who's playing
