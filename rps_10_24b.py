@@ -55,7 +55,7 @@ def tied_round(one, two):
 
 
 def play_again_question():
-    response = input("Play again? (y/n)")
+    response = input("Play again? (y/n)").lower()
     if response == "y":
         if __name__ == '__main__':
             game = Game(HumanPlayer(), RandomPlayer())  # Who's playing
@@ -102,10 +102,16 @@ class Game:
         results2 = self.p2_score
         if results1 == 3:
             print("Hooray! Player 1 has won the most rounds!")
+            print(f"Results:\nPlayer 1 Final Score - {self.p1_score} "
+                  f"point(s)\nPlayer 2 Final Score - {self.p2_score} "
+                  "point(s).")
             print("Player 2 has been defeated.\n")
             play_again_question()
         if results2 == 3:
             print("Incredible! Player 2 has won the most rounds!")
+            print(f"Results:\nPlayer 1 Final Score - {self.p1_score} "
+                  f"point(s)\nPlayer 2 Final Score - {self.p2_score} "
+                  "point(s).")
             print("Player 1 has been defeated.\n")
             play_again_question()
 
