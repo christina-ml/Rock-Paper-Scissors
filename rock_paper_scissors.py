@@ -58,7 +58,7 @@ class HumanPlayer(Player):
 class ReflectPlayer(Player):  # Remembers what opponent played last round
     def move(self):
         if self.their_move is None:
-            return random.choice(moves)
+            return random.choice(moves)  # Gives a move instead of saying None
         else:
             while True:
                 if self.their_move == 'rock':
@@ -72,7 +72,7 @@ class ReflectPlayer(Player):  # Remembers what opponent played last round
 class CyclePlayer(Player):  # Remembers what move it played last round
     def move(self):         # and plays a different move the next round.
         if self.my_move is None:
-            return random.choice(moves)
+            return random.choice(moves)  # Gives a move instead of saying None
         else:
             while True:
                 if self.my_move == 'rock':
@@ -183,3 +183,11 @@ class Game:
 if __name__ == '__main__':
     game = Game(CyclePlayer(), HumanPlayer())  # Who is playing the game
     game.play_game()
+
+
+#  How to use None ("is" vs "==") - https://www.educative.io/edpresso/
+#                    what-is-the-none-keyword-in-python
+#  Colors - https://godoc.org/github.com/whitedevops/colors
+#  Colors - https://stackoverflow.com/questions/287871/how-
+#            to-print-colored-text-in-python
+#  Colors - https://gist.github.com/vratiu/9780109
