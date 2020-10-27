@@ -7,12 +7,11 @@ import time  # For time delay, so it doesn't all print at once.
 
 
 class bcolors:
-    RED   = "\033[1;31m"  
-    CYAN  = "\033[1;36m"
+    RED = "\033[1;31m"
+    CYAN = "\033[1;36m"
     GREEN = "\033[0;32m"
     ENDC = '\033[0m'
     PURPLE = "\033[0;35m"
-
 
 
 moves = ['rock', 'paper', 'scissors']
@@ -146,7 +145,8 @@ class Game:
         if results1 == 3:
             print(f"{bcolors.RED}* * * GAME OVER * * * {bcolors.ENDC}")
             print(f"{bcolors.RED}Player 2 has been defeated.{bcolors.ENDC}")
-            print(f"{bcolors.GREEN}Player 1 won the most rounds!{bcolors.ENDC}\n")
+            print(f"{bcolors.GREEN}Player 1 won the most "
+                  f"rounds!{bcolors.ENDC}\n")
             print(f"Results:\n {bcolors.CYAN}Player 1 Final Score - "
                   f"{self.p1_score} point(s)\n {bcolors.ENDC}"
                   f"{bcolors.PURPLE}Player 2 Final Score - "
@@ -155,7 +155,8 @@ class Game:
         if results2 == 3:
             print(f"{bcolors.RED}* * * GAME OVER * * * {bcolors.ENDC}")
             print(f"{bcolors.RED}Player 1 has been defeated.{bcolors.ENDC}")
-            print(f"{bcolors.GREEN}Player 2 won the most rounds!{bcolors.ENDC}\n")
+            print(f"{bcolors.GREEN}Player 2 won the most "
+                  f"rounds!{bcolors.ENDC}\n")
             print(f"Results:\n {bcolors.CYAN}Player 1 Final Score - "
                   f"{self.p1_score} point(s)\n {bcolors.ENDC}"
                   f"{bcolors.PURPLE}Player 2 Final Score - "
