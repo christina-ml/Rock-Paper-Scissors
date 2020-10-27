@@ -194,15 +194,15 @@ def choose_whos_playing():
                     "against. Type the number, then press the 'enter' "
                     "key on your keyboard:\n")
         Player1_choice = input("Choose one of these options for Player 2:\n"
-                               "(1)Player that only chooses Rock.\n"
-                               "(2)Random Player - computer randomly "
+                               "(1) Player that only chooses Rock.\n"
+                               "(2) Random Player - computer randomly "
                                "picks moves.\n"
-                               "(3)Reflect Player - will remember and "
+                               "(3) Reflect Player - will remember and "
                                "imitate what you played in the previous "
                                "round.\n"
-                               "(4)Cycle Player - will cycle through the "
+                               "(4) Cycle Player - will cycle through the "
                                "three moves.\n"
-                               "(5)Human Player 2 - Ask a friend to play "
+                               "(5) Human Player 2 - Ask a friend to play "
                                "with you!\n"
                                "Type the number here and press 'enter' > ")
 
