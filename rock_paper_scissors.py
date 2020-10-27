@@ -19,7 +19,7 @@ moves = ['rock', 'paper', 'scissors']
 
 def print_pause(message_to_print):
     print(message_to_print)
-    time.sleep(0.2)
+    time.sleep(1)
 
 
 """The Player class is the parent class for all of the Players
